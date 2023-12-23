@@ -1,0 +1,14 @@
+public boolean isAnagram(String s1, String s2) {
+    List<String> sl1 = s1.split('');
+    List<String> sl2 = s2.split('');
+
+    sl1.sort();
+    sl2.sort();
+
+    for(String s : sl1){
+        if(!sl2.contains(s)){
+            return false;
+        }
+    }
+    return true;
+}
