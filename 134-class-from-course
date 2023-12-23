@@ -8,5 +8,7 @@ public Id classFromCourse(String courseName) {
         classInst.apxio__Course__c = course.Id;
 
         insert classInst;
+        return classInst.Id;
     }
+    return null;
 }
