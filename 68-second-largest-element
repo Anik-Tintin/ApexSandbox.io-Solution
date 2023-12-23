@@ -1,5 +1,7 @@
 public Integer secondLargest(List<Integer> numbers) {
     //code here
-    numbers.sort();
-    return numbers.get(numbers.size()-2);
+    Set<Integer> numberSet = new Set<Integer>();
+    numberSet.addAll(numbers);
+    numberSet.sort();
+    return numberSet.get(numberSet.size()-2);
 }
