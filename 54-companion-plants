@@ -1,0 +1,18 @@
+public Boolean companionPlants(String plant1, String plant2) {
+    String String1 = 'lettuce & onions';
+    String String2 = 'lettuce  & cucumbers';
+    String String3 = 'onions  & carrots';
+    String String4 = 'onions & tomatoes';
+
+    if(
+        (String1.contains(plant1) && String1.contains(plant2)) || 
+        (String2.contains(plant1) && String2.contains(plant2)) ||
+        (String3.contains(plant1) && String3.contains(plant2)) ||
+        (String4.contains(plant1) && String4.contains(plant2))
+        ){
+            return true;
+        }
+        else{
+            return false;
+        }
+}
