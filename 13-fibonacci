@@ -1,0 +1,19 @@
+public Integer fibonacci(Integer n) {
+    Integer firstNum = 1;
+    Integer secondNum = 1;
+    Integer thirdNum = 0;
+    Integer i=3;
+    
+    if(n<3){
+        return 1;
+    }
+    else{
+        while(n<=i){
+            thirdNum = firstNum+secondNum;
+            firstNum = secondNum;
+            secondNum = thirdNum;
+            i++;
+        }
+        return thirdNum;
+    }
+}
