@@ -12,7 +12,6 @@ public Integer fibonacci(Integer n) {
             thirdNum = firstNum+secondNum;
             firstNum = secondNum;
             secondNum = thirdNum;
-            i++;
         }
         return thirdNum;
     }
