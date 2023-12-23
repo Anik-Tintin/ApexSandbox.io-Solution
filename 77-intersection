@@ -1,0 +1,15 @@
+public Set<Integer> setIntersection(Set<Integer> set1, Set<Integer> set2) {
+    List<Integer> unionList = new List<Integer>();
+    unionList.addAll(set1);
+    unionList.addAll(set2);
+    unionList.sort();
+
+    Set<Integer> intersectSet = new Set<Integer>();
+
+    for(Integer i=0;i<unionList.size()-1;i++){
+        if(unionList[i]==unionList[i+1]){
+            intersectSet.add(unionList[i]);
+        }
+    }
+    return intersectSet;
+}
