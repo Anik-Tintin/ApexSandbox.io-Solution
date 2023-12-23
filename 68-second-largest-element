@@ -4,6 +4,6 @@ public Integer secondLargest(List<Integer> numbers) {
     numberSet.addAll(numbers);
     numbers.clear();
     numbers.addAll(numberSet);
-    numberSet.sort();
-    return numberSet.get(numberSet.size()-2);
+    numbers.sort();
+    return numbers.get(numbers.size()-2);
 }
