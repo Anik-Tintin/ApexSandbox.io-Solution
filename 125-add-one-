@@ -5,7 +5,7 @@ public void plusOne(List<Integer> numbers) {
         num+=String.valueOf(n);
     }
 
-    Integer numMod = Integer.valueOf(num)+1;
+    Integer numMod = Integer.valueOf(num)+2;
 
     List<String> numbersModStr =  string.valueOf(numMod).split('');
     List<Integer> numbersMod = new List<Integer>();
