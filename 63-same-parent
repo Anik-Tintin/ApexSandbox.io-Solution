@@ -1,0 +1,13 @@
+public Boolean sameParent(Contact c, Opportunity opp) {
+    if(opp.AccountId!=null && c.AccountId!=null){
+        if(opp.AccountId == c.AccountId){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    else{
+        return false;
+    }
+}
