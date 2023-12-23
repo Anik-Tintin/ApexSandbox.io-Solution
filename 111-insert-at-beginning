@@ -1,0 +1,7 @@
+public void insertAtStart(String cityName, List<String> cities) {
+    List<String> cityCopy = new List<String>();
+    cityCopy.add(cityName);
+    cityCopy.addAll(cities);
+    cities.clear();
+    cities.addAll(cityCopy);
+}
