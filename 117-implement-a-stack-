@@ -9,6 +9,9 @@ public class Stack {
     
     public Object pop() {
         //implement pop
+        if(stack.size()<=0){
+            return null;
+        }
         Object st = stack.get(stack.size()-1);
         stack.remove(stack.size()-1);
         return st;
