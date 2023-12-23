@@ -9,7 +9,7 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
             return middle;
         }
         else if(opportunities[middle].Amount>target){
-            right = middle;
+            right = middle-1;
         }
         else{
             left = middle+1;
