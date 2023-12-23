@@ -5,8 +5,12 @@ public boolean isAnagram(String s1, String s2) {
     sl1.sort();
     sl2.sort();
 
-    for(String s : sl1){
-        if(!sl2.contains(s)){
+    if(sl1.size()!=sl2.size()){
+        return false;
+    }
+
+    for(Integer i=0;i<sl1.size();i++){
+        if(sl1[i] != sl2[i]){
             return false;
         }
     }
