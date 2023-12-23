@@ -1,0 +1,3 @@
+public List<apxio__Student__c> selectActiveStudents() {
+    return [select Id, Name from apxio__Student__c  where Name!=null and apxio__Active__c =true];
+}
