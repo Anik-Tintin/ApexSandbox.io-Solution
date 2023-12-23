@@ -2,7 +2,7 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
     Integer count = 1;
     Integer firstNum = 0;
     Integer secondNum = 0;
-
+    Integer maxCount = 0;
     for(Integer i=0;i<numbers.size()-1;i++){
         firstNum = numbers[i];
         secondNum = numbers[i+1];
@@ -10,6 +10,9 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
             count++;
         }
         else{
+            if(count>maxCount){
+                maxCount = count;
+            }
             count = 1;
         }
     }
