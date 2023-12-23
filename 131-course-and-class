@@ -1,0 +1,14 @@
+public void createCourseAndClass(String name, String description) {
+    // code here
+    apxio__Course__c course = new apxio__Course__c();
+    course.Name = name;
+    course.apxio__Course_Details__c = description;
+    insert course;
+
+    apxio__Class__c classInst = new apxio__Class__c();
+    classInst.Name = name;
+    classInst.apxio__Description__c =  description!=null && description.length()>255 ? description.substring(0, 255) : description;
+    classInst.apxio__Course__c = course.Id;
+
+    insert classInst;
+}
