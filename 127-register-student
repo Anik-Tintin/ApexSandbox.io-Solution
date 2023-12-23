@@ -5,5 +5,6 @@ public String registerStudent(String name, String phone, String email) {
     std.Name = name;
 
     insert std;
-    return std.apxio__Registration_Number__c;
+
+    return [select Id, apxio__Registration_Number__c from apxio__Student__c where apxio__Email__c =:email limit 1].apxio__Registration_Number__c;
 }
