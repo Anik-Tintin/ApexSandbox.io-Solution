@@ -1,0 +1,20 @@
+public List<Account> getAccounts(List<Account> accounts) {
+    List<Decimal> annualRevenueList = new List<Decimal>();
+    for(Account acc : accounts){
+        if(acc.AnnualRevenue!=null){
+            annualRevenueList.add(acc.AnnualRevenue);
+        }
+    }
+
+    annualRevenueList.sort();
+    List<Account> sortedAccounts = new List<Account>();
+    for(Integer i=annualRevenueList.size()-1; i>=0;i--){
+        for(Account acc : accounts){
+            if(acc.AnnualRevenue == annualRevenueList[i]){
+                sortedAccounts.add(acc);
+            }
+        }
+    }
+    return sortedAccounts;
+}
+// write extra class here 
