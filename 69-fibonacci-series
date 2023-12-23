@@ -1,0 +1,25 @@
+public List<Integer> fibonacciSeries(Integer n) {
+    List<Integer> numbers = new List<Integer>();
+    Integer firstNum = 0;
+    Integer secondNum = 0;
+    Integer sum = 0;
+
+    if(n>0){
+        numbers.add(1);
+    }
+    if(n>1){
+        mumbers.add(1);
+    }
+    Integer size = numbers.size()-1;
+    if(n>2){
+        for(Integer i=3; i<n;i++){
+            firstNum = numbers[size];
+            secondNum = numbers[size-1];
+            sum = firstNum+secondNum;
+            numbers.add(sum);
+            size = numbers.size()-1;
+        }
+    }
+
+    return numbers;
+}
