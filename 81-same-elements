@@ -1,0 +1,18 @@
+public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
+    Boolean isFirstSet = true;
+    Boolean isSecondSet = true;
+
+    for(Integer num : nums1){
+        if(!nums2.contains(num)){
+            isFirstSet = false;
+        }
+    }
+
+    for(Integer num : nums2){
+        if(!nums1.contains(num)){
+            isSecondSet = false;
+        }
+    }
+
+    return (isFirstSet || isSecondSet);
+}
