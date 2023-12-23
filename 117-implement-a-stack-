@@ -21,7 +21,7 @@ public class Stack {
     
     public Object peek(){
         //implement peek
-        retrun stack.get(stack.size()-1);
+        return stack.get(stack.size()-1);
     }
     
     public Boolean isEmpty() {
