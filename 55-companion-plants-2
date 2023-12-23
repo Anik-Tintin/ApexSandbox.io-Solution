@@ -7,10 +7,10 @@ public Boolean companionPlants(List<String> plants) {
     Boolean isCompanion = false;
 
     for(Integer i=0;i<plants.size()-1;i++){
-        if((companionSet1.contains(plants[i]) && companionSet1.contains(plants[i+1]))|| 
+        if(((companionSet1.contains(plants[i]) && companionSet1.contains(plants[i+1]))|| 
         (companionSet2.contains(plants[i]) && companionSet2.contains(plants[i+1]))|| 
         (companionSet3.contains(plants[i]) && companionSet3.contains(plants[i+1]))|| 
-        (companionSet4.contains(plants[i]) && companionSet4.contains(plants[i+1]))){
+        (companionSet4.contains(plants[i]) && companionSet4.contains(plants[i+1]))) && plants[i]!=plants[i+1]){
             isCompanion = true;
         }
         else{
