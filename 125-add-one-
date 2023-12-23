@@ -1,0 +1,11 @@
+public void plusOne(List<Integer> numbers) {
+    String num = '';
+
+    for(Integer n : numbers){
+        num+=String.valueOf(n);
+    }
+
+    Integer numMod = Integer.valueOf(num)+1;
+
+    return string.valueOf(numMod).split('');
+}
