@@ -8,11 +8,12 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
         if(opportunities[middle].Amount == target){
             return middle;
         }
-        else if(opportunities[middle]>target{
+        else if(opportunities[middle]>target){
             right = middle;
         }
         else{
             left = middle+1;
         }
     }
+    return -1;
 }
