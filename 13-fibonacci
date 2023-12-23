@@ -8,7 +8,7 @@ public Integer fibonacci(Integer n) {
         return 1;
     }
     else{
-        while(n<=i){
+        for(i=3;i<=n;i++){
             thirdNum = firstNum+secondNum;
             firstNum = secondNum;
             secondNum = thirdNum;
