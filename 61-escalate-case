@@ -1,0 +1,11 @@
+public void escalateIfMeetsCriteria(Case c) {
+   if(String.isNotBlank(c.Type) && String.isNotBlank(c.Reason) && String.isNotBlank(c.Status)){
+       if((c.Type == 'Mechanical' || c.Type == 'Electrical') 
+            && c.Reason == 'Breakdown' && c.Status == 'In Progress'){
+            c.IsEscalated =true;
+       }
+   }
+   else{
+       c.IsEscalated =false;
+   }
+}
