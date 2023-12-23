@@ -8,7 +8,7 @@ public List<Integer> fibonacciSeries(Integer n) {
         numbers.add(1);
     }
     if(n>1){
-        mumbers.add(1);
+        numbers.add(1);
     }
     Integer size = numbers.size()-1;
     if(n>2){
