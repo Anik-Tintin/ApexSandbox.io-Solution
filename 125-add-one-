@@ -7,5 +7,5 @@ public void plusOne(List<Integer> numbers) {
 
     Integer numMod = Integer.valueOf(num)+1;
 
-    return string.valueOf(numMod).split('');
+    List<Integer> numbersMod =  string.valueOf(numMod).split('');
 }
