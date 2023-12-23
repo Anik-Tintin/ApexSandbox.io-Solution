@@ -4,7 +4,7 @@ public Boolean companionPlants(List<String> plants) {
     String companionSet2 = 'lettuce and onions';
     String companionSet3 = 'onions and carrots';
     String companionSet4 = 'onions and tomatoes';
-    Boolean isCompanion = false;
+    Boolean isCompanion = true;
 
     for(Integer i=0;i<plants.size()-1;i++){
         if(((companionSet1.contains(plants[i]) && companionSet1.contains(plants[i+1]))|| 
