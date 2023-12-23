@@ -7,12 +7,5 @@ public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
             isFirstSet = false;
         }
     }
-
-    for(Integer num : nums2){
-        if(!nums1.contains(num)){
-            isSecondSet = false;
-        }
-    }
-
-    return (isFirstSet || isSecondSet);
+    return isFirstSet;
 }
