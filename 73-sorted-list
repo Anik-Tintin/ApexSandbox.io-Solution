@@ -1,0 +1,18 @@
+public boolean isSorted(List<Integer> numbers) {
+    Boolean isAsc = true;
+    Boolean isDesc = true;
+
+    for(Integer i=0;i<numbers.size()-1;i++){
+        if(numbers[i]>numbers[i+1]){
+            isAsc =false;
+        }
+    }
+
+    for(Integer i=0;i<numbers.size()-1;i++){
+        if(numbers[i]<numbers[i+1]){
+            isDesc =false;
+        }
+    }
+
+    return (isAsc || isDesc);
+}
