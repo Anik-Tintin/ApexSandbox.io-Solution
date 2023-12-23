@@ -7,12 +7,12 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
         firstNum = numbers[i];
         secondNum = numbers[i+1];
         if(firstNum == secondNum && secondNum == 1){
-            count++;
-        }
-        else{
+            count++;  
             if(count>maxCount){
                 maxCount = count;
             }
+        }
+        else{
             count = 1;
         }
     }
