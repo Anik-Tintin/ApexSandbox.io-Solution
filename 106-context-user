@@ -1,0 +1,12 @@
+public Map<String,String> getContextUserInformation(){
+    Map<String,String> userMap = new Map<String,String>();
+
+    for(User u : [select Id, name, EmailId, ProfileId, Type, UserName from User where 
+    Id =:UserInfo.getUserId()]){
+        userMap.put('EmailId', u.EmailId);
+        userMap.put('ProfileId', u.ProfileId);
+        userMap.put('Type', u.Type);
+        userMap.put('UserName', u.UserName);
+    }
+    return userMap;
+}
