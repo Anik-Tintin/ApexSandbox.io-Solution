@@ -1,5 +1,9 @@
 public List<Account> getAccounts(List<Account> accounts) {
     List<Decimal> annualRevenueList = new List<Decimal>();
+    if(accounts==null){
+        return null;
+    }
+    
     for(Account acc : accounts){
         if(acc.AnnualRevenue!=null){
             annualRevenueList.add(acc.AnnualRevenue);
