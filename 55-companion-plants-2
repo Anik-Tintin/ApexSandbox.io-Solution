@@ -1,3 +1,17 @@
 public Boolean companionPlants(List<String> plants) {
     //code here
+    String companionSet1 = 'lettuce and cucumbers';
+    String companionSet2 = 'lettuce and onions';
+    String companionSet3 = 'onions and carrots';
+    String companionSet4 = 'onions and tomatoes';
+
+    for(Integer i=0;i<plants.size()-1;i++){
+        if((!companionSet1.contains(plants[i] && !companionSet1.contains(plants[i+1])|| 
+        (!companionSet2.contains(plants[i] && !companionSet2.contains(plants[i+1])|| 
+        (!companionSet3.contains(plants[i] && !companionSet3.contains(plants[i+1])|| 
+        (!companionSet4.contains(plants[i] && !companionSet4.contains(plants[i+1])){
+            return false;
+        }
+    }
+    return true;
 }
