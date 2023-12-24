@@ -1,0 +1,40 @@
+public Boolean isValid(String s){
+    //code here 
+    List<String> strList = s.split('');
+    Integer count = 0;
+    Map<String, Integer> braceMap = new Map<String, Integer>();
+    Boolean firstBraceFlag = false;
+    Boolean secondBraceFlag = false;
+    Boolean thirdBraceFlag = false;
+
+    for(String str : strList){
+        if(braceMap.containsKey(str)){
+            count = braceMap.get(str);
+        }
+        else{
+            count = 0;
+        }
+        count++;
+        braceMap.put(str, count);
+    }
+
+    if(braceMap.containsKey('(') && braceMap.containsKey(')')){
+        if(braceMap.get('(') == braceMap.get(')')){
+            firstBraceFlag = true;
+        }
+    }
+
+    if(braceMap.containsKey('{') && braceMap.containsKey('}')){
+        if(braceMap.get('{') == braceMap.get('}')){
+            secondBraceFlag = true;
+        }
+    }
+
+    if(braceMap.containsKey('[') && braceMap.containsKey(']')){
+        if(braceMap.get('[') == braceMap.get(']')){
+            thirdBraceFlag = true;
+        }
+    }
+
+    return firstBraceFlag && secondBraceFlag && thirdBraceFlag;
+}
