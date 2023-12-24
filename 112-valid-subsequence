@@ -1,0 +1,20 @@
+public Boolean isSubSequence(String s1, String s2){
+    //code here
+    List<String> sl1 = s1.split('');
+    List<String> sl2 = s2.split('');
+    Integer i = 0;
+    for(String sl : sl1){
+        if(sl2.contains(sl)){
+            if(sl2.indexOf(sl)>i){
+                i=sl2.indexOf(sl);
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+    }
+    return true;
+}
