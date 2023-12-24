@@ -5,7 +5,7 @@ public Boolean isSubSequence(String s1, String s2){
     Integer i = 0;
     for(String sl : sl1){
         if(sl2.contains(sl)){
-            if(sl2.indexOf(sl)>i){
+            if(sl2.indexOf(sl)>=i){
                 i=sl2.indexOf(sl);
             }
             else{
