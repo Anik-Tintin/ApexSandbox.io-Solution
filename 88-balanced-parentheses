@@ -3,9 +3,9 @@ public Boolean isValid(String s){
     List<String> strList = s.split('');
     Integer count = 0;
     Map<String, Integer> braceMap = new Map<String, Integer>();
-    Boolean firstBraceFlag = false;
-    Boolean secondBraceFlag = false;
-    Boolean thirdBraceFlag = false;
+    Boolean firstBraceFlag = true;
+    Boolean secondBraceFlag = true;
+    Boolean thirdBraceFlag = true;
 
     for(String str : strList){
         if(braceMap.containsKey(str)){
@@ -22,17 +22,26 @@ public Boolean isValid(String s){
         if(braceMap.get('(') == braceMap.get(')')){
             firstBraceFlag = true;
         }
+        else{
+            firstBraceFlag = false;
+        }
     }
 
     if(braceMap.containsKey('{') && braceMap.containsKey('}')){
         if(braceMap.get('{') == braceMap.get('}')){
             secondBraceFlag = true;
         }
+        else{
+            secondBraceFlag = false;
+        }
     }
 
     if(braceMap.containsKey('[') && braceMap.containsKey(']')){
         if(braceMap.get('[') == braceMap.get(']')){
             thirdBraceFlag = true;
+        }
+        else{
+            thirdBraceFlag = false;
         }
     }
 
