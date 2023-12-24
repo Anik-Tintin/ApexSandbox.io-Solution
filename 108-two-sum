@@ -5,6 +5,7 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
      for(Integer num : nums){
         if(nums.contains(target-num)){
             indexList.add(num, nums.indexOf(target-num));
+            break;
         }
      }
      return indexList;
