@@ -3,7 +3,7 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
      List<Integer> indexList = new List<Integer>();
 
      for(Integer num : nums){
-        if(nums.contains(target-num)){
+        if(nums.contains(target-num) && nums.indexOf(num)!=nums.indexOf(target-num)){
             indexList.add(nums.indexOf(num));
             indexList.add(nums.indexOf(target-num));
             break;
