@@ -7,4 +7,5 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
             indexList.add(num, nums.indexOf(target-num));
         }
      }
+     return indexList;
 }
