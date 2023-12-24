@@ -1,0 +1,10 @@
+public static List<Integer> twoSum(List<Integer> nums, Integer target) {
+     //code here
+     List<Integer> indexList = new List<Integer>();
+
+     for(Integer num : nums){
+        if(nums.contains(target-num)){
+            indexList.add(num, nums.indexOf(target-num));
+        }
+     }
+}
