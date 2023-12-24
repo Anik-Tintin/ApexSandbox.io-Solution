@@ -8,8 +8,8 @@ public void plusOne(List<Integer> numbers) {
     Integer numMod = Integer.valueOf(num)+1;
 
     List<String> numbersModStr =  String.valueOf(numMod).split('');
-    List<Integer> numbersMod = new List<Integer>();
+    numbers.clear();
     for(String st : numbersModStr){
-        numbersMod.add(Integer.valueOf(st));
+        numbers.add(Integer.valueOf(st));
     }
 }
