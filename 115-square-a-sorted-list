@@ -1,0 +1,9 @@
+public static List<Integer> squareList(List<Integer> nums){
+    //solution here
+    List<Integer> sortedList = new List<Integer>();
+    for(Integer num : nums){
+        sortedList.add(num*num);
+    }
+    sortedList.sort();
+    return sortedList;
+}
