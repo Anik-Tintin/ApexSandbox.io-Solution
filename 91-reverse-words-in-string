@@ -6,7 +6,7 @@ public static String reverseWords(String str){
     for(Integer i=0; i<words.size()-1; i++){
         reverse += words[i].reverse()+' ';
     }
-    reverse += words[words.size()-1].reverse;
+    reverse += words[words.size()-1].reverse();
 
     return reverse;
 }
