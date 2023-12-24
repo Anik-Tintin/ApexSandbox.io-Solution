@@ -1,0 +1,18 @@
+public static void segregateEvenOdd(List<Integer> numbers){
+    //code here
+    List<Integer> numList = new List<Integer>();
+    for(Integer num : numbers){
+        if(Math.mod(num,2)==0){
+            numList.add(num);
+        }
+    }
+
+    for(Integer num : numbers){
+        if(Math.mod(num,2)!=0){
+            numList.add(num);
+        }
+    }
+
+    numbers.clear();
+    numbers.addAll(numList);
+}
